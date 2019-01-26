@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CanDestroy
+  - Robot
+  - FxTemporaire
+  - SceneFader
+  - Gate
+  - Enemy
   layers:
   - Default
   - TransparentFX
