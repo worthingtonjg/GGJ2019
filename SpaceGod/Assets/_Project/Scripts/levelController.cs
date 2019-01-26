@@ -28,6 +28,8 @@ public class levelController : MonoBehaviour
 
     public AudioClip explosionClip;
 
+    public GameObject EnemyController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +59,7 @@ public class levelController : MonoBehaviour
     IEnumerator BeginBattle()
     {
         yield return new WaitForSeconds(intro2Clip.length + 1);
+        EnemyController.SetActive(true);
         yield return StartCoroutine(Explode(Dead1, 1f));
         yield return StartCoroutine(Explode(Dead2, 1f));
         yield return StartCoroutine(Explode(Dead3, 1f));
