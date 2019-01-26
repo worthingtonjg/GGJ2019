@@ -7,6 +7,6 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        SimpleSceneFader.ChangeSceneWithFade("Mitch");
+        SimpleSceneFader.ChangeSceneWithFade("Level01");
     }
 }
