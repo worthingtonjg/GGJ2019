@@ -10,6 +10,7 @@ TagManager:
   - SceneFader
   - Gate
   - Enemy
+  - DropShip
   layers:
   - Default
   - TransparentFX
