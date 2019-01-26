@@ -83,10 +83,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
-      propertyPath: m_Name
-      value: Missile1 Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -142,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
+      propertyPath: m_Name
+      value: missle
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
       propertyPath: m_Materials.Array.data[0]
