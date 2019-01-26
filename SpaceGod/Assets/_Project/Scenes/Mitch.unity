@@ -937,6 +937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1651761550994135468, guid: 9b344489147b1754a86c9f336734db29, type: 3}
+  minSpawn: 0.1
+  maxSpawn: 5
 --- !u!1 &1525562497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1615,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079267366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

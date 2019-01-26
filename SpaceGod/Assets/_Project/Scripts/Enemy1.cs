@@ -5,10 +5,20 @@ using UnityEngine;
 public class Enemy1 : MonoBehaviour
 {
     private GameObject Player;
+
+    private AudioSource audioSource;
+
     public float Speed = 3.0f;
+    public GameObject Explosion;
+
+    public AudioClip explosionClip;
+
+    public GameObject ExplosionPoint;
+    
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = Camera.main.GetComponent<AudioSource>();
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -28,8 +38,10 @@ public class Enemy1 : MonoBehaviour
         if(otherObject.tag == "Player")
         {
             print("2");
+            Vector3 position = ExplosionPoint.transform.position;
             Destroy(transform.gameObject);
-            //blow stuff up
+            GameObject.Instantiate(Explosion, position, Quaternion.identity);
+            audioSource.PlayOneShot(explosionClip);
         }
     }
 }

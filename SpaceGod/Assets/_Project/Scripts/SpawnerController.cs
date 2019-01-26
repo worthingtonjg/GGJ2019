@@ -6,6 +6,9 @@ public class SpawnerController : MonoBehaviour
 {
     private GameObject Spawner;
     public GameObject Enemy;
+
+    public float minSpawn = 0.1f;
+    public float maxSpawn = 5.0f;
     void Start()
     {
         Invoke("RandomThing", 1);
@@ -14,7 +17,7 @@ public class SpawnerController : MonoBehaviour
     // Update is called once per frame
     void RandomThing()
     {
-        float randomTime = Random.Range(0.1f, 5.0f);
+        float randomTime = Random.Range(minSpawn, maxSpawn);
 
         GameObject[] list = GameObject.FindGameObjectsWithTag("Respawn");
         int randomSpawn = Random.Range(0, (list.Length));
