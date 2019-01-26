@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class exit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool battleStarted;
+    public int Escaped;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider otherObject)
     {
-        
+        if(otherObject.tag == "DropShip")
+        {
+            GameObject.Destroy(otherObject.transform.gameObject);
+            
+            if(battleStarted)
+            {
+                ++Escaped;
+            }
+        }
     }
 }
