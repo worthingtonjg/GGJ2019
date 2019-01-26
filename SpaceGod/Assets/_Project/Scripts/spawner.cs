@@ -7,6 +7,6 @@ public class spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Invoke("RandomThing", 1);
+        transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 }

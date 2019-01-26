@@ -20,9 +20,7 @@ public class SpawnerController : MonoBehaviour
         int randomSpawn = Random.Range(0, (list.Length));
         Spawner = list[randomSpawn];
     
-        // do you code
         var newEnemy = GameObject.Instantiate(Enemy, Spawner.transform.position, Spawner.transform.rotation);
         Invoke("RandomThing", randomTime);
-    
     }
 }

@@ -28,7 +28,8 @@ public class Enemy1 : MonoBehaviour
         if(otherObject.tag == "Player")
         {
             print("2");
-            Destroy(this);
+            Destroy(transform.gameObject);
+            //blow stuff up
         }
     }
 }
