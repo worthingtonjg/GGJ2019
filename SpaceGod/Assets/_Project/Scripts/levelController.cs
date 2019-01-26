@@ -5,6 +5,7 @@ using UnityEngine;
 public class levelController : MonoBehaviour
 {
     private bool battleStarted;
+    private bool intro1Complete;
     private AudioSource audioSource;
     private GameObject player;
 
@@ -36,11 +37,13 @@ public class levelController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         audioSource = player.GetComponent<AudioSource>();
         audioSource.PlayOneShot(intro1Clip);
+
+        StartCoroutine(Intro1Completed());
     }
 
     void Update()
     {
-        if(!battleStarted)
+        if(intro1Complete && !battleStarted)
         {
             Ray ray = player.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
             RaycastHit hit;
@@ -54,6 +57,12 @@ public class levelController : MonoBehaviour
                 }
             }
 
+    }
+
+    IEnumerator Intro1Completed()
+    {
+        yield return new WaitForSeconds(intro1Clip.length);
+        intro1Complete = true;
     }
 
     IEnumerator BeginBattle()
