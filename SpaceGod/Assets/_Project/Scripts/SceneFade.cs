@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneFader : MonoBehaviour
+public class SceneFade : MonoBehaviour
 {
     // Start is called before the first frame update
     public void Load(string scene)
