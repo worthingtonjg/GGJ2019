@@ -1,0 +1,9 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <UnityWSASolutionName>SpaceGod</UnityWSASolutionName>
+        <UnityWSASolutionDir>C:\Users\jbyer\Documents\UnityGames\SpaceGod\App\</UnityWSASolutionDir>
+        <UnityProjectDir>C:\Users\jbyer\Documents\UnityGames\SpaceGod\</UnityProjectDir>
+        <UnityWSAPlayerDir>C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
+        <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
+    </PropertyGroup>
+</Project>
