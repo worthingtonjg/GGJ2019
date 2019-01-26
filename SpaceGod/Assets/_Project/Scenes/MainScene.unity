@@ -638,13 +638,13 @@ PrefabInstance:
         type: 3}
       propertyPath: AlternateLeftController
       value: 
-      objectReference: {fileID: 521198572, guid: e6fed78313d2f674898aea4c3bbe7971,
+      objectReference: {fileID: 7041048750933339207, guid: 84c3e4bd999359147bcc9aed4989b53a,
         type: 3}
     - target: {fileID: 114710303647202208, guid: d29bc40b7f3df26479d6a0aac211c355,
         type: 3}
       propertyPath: AlternateRightController
       value: 
-      objectReference: {fileID: 1726943233, guid: 799d1e54d15430844b9db432c3a30c5b,
+      objectReference: {fileID: 7933281400259120331, guid: f44c2558224c81f439d3b0c6c4815053,
         type: 3}
     - target: {fileID: 114710303647202208, guid: d29bc40b7f3df26479d6a0aac211c355,
         type: 3}
