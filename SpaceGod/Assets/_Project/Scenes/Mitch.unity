@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 227290288}
   m_Layer: 0
   m_Name: Spawner11
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 316445933}
   m_Layer: 0
   m_Name: Spawner9
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 577637683}
   m_Layer: 0
   m_Name: Spawner12
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,7 +624,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745105356}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 1406750416}
   m_Layer: 0
   m_Name: Spawner4
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,6 +872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467447270}
+  - component: {fileID: 1467447271}
   m_Layer: 0
   m_Name: SpawnerController
   m_TagString: Untagged
@@ -905,6 +906,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467447271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467447269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c870f04a56437e41b8fcd2cb264e3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 5781665478870554992, guid: 18e9cb76a2889a04089f558c5a5a1fda, type: 3}
 --- !u!1 &1525562497
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +934,7 @@ GameObject:
   - component: {fileID: 1525562498}
   m_Layer: 0
   m_Name: Spawner8
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1026,7 +1040,7 @@ GameObject:
   - component: {fileID: 1687686058}
   m_Layer: 0
   m_Name: Spawner2
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1146,7 @@ GameObject:
   - component: {fileID: 1805257408}
   m_Layer: 0
   m_Name: Spawner6
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1238,7 +1252,7 @@ GameObject:
   - component: {fileID: 1816150733}
   m_Layer: 0
   m_Name: Spawner7
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1344,7 +1358,7 @@ GameObject:
   - component: {fileID: 1903161332}
   m_Layer: 0
   m_Name: Spawner5
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1450,7 +1464,7 @@ GameObject:
   - component: {fileID: 2027692488}
   m_Layer: 0
   m_Name: Spawner10
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,7 +1570,7 @@ GameObject:
   - component: {fileID: 2079267371}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1662,7 +1676,7 @@ GameObject:
   - component: {fileID: 2129956347}
   m_Layer: 0
   m_Name: Spawner3
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

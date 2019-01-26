@@ -21,4 +21,14 @@ public class Enemy1 : MonoBehaviour
         // remenber to use the new 'follow' position, not the Player.transform.position or else it'll move directly to the player
         this.transform.position = Vector3.MoveTowards(this.transform.position, follow, Speed * Time.deltaTime);
     }
+
+    void OnTriggerEnter(Collider otherObject)
+    {
+        print("1");
+        if(otherObject.tag == "Player")
+        {
+            print("2");
+            Destroy(this);
+        }
+    }
 }
