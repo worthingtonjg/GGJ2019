@@ -678,7 +678,7 @@ InputManager:
     axis: 23
     joyNum: 0
   - serializedVersion: 3
-    m_Name: AXIS_25
+    m_Name: CONTROLLER_RIGHT_STICK_HORIZONTAL
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -694,7 +694,7 @@ InputManager:
     axis: 24
     joyNum: 0
   - serializedVersion: 3
-    m_Name: AXIS_26
+    m_Name: CONTROLLER_RIGHT_STICK_VERTICAL
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -710,7 +710,23 @@ InputManager:
     axis: 25
     joyNum: 0
   - serializedVersion: 3
-    m_Name: AXIS_27
+    m_Name: CONTROLLER_LEFT_STICK_HORIZONTAL
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.001
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 26
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: CONTROLLER_LEFT_STICK_VERTICAL
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
