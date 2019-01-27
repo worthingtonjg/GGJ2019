@@ -27,9 +27,12 @@ public class enemyController : MonoBehaviour
         
         int randomSpawn = Random.Range(0, (enemyShips.Length));
         Spawner = enemyShips[randomSpawn];
-    
-        var newEnemy = GameObject.Instantiate(MisslePrefab, Spawner.transform.position, Spawner.transform.rotation);
-        newEnemy.transform.LookAt(Player.transform);
-        Invoke("Fire", randomTime);
+
+        if (Spawner != null)
+        {
+            var newEnemy = GameObject.Instantiate(MisslePrefab, Spawner.transform.position, Spawner.transform.rotation);
+            newEnemy.transform.LookAt(Player.transform);
+            Invoke("Fire", randomTime);
+        }
     }
 }

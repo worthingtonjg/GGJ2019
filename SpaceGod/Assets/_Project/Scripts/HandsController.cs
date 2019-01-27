@@ -11,6 +11,7 @@ public class HandsController : MonoBehaviour
     public GameObject PhotonTorpedoPrefab;
     private GameObject PhotonTorpedo;
     private float fireTime;
+    public float speed = 1f;
 
     private Transform leftHandTransform;
     private Transform rightHandTransform;
@@ -65,27 +66,27 @@ public class HandsController : MonoBehaviour
                     fireTime = Time.time;
                 }
             }
-            //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
-            else if (interactionSourceState.touchpadTouched) // Touchpad touched
+            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
             {
                 // Change the position of the player to the right
+                transform.Translate(Vector3.right * speed * Time.deltaTime);
+
             }
-            //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
-            //{
-            //    // Change the position of the player to the left
-
-            //}
-            //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y > 0.5) // Touchpad moved up
-            //{
-            //    // Change the position of the player forward
-
-
-            //}
-            //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y < -0.5) // Touchpad moved down
-            //{
-            //    // Change the position of the player backward
-
-            //}
+            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
+            {
+                // Change the position of the player to the left
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y > 0.5) // Touchpad moved up
+            {
+                // Change the position of the player forward
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            }
+            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y < -0.5) // Touchpad moved down
+            {
+                // Change the position of the player backward
+                transform.Translate(Vector3.back * speed * Time.deltaTime);
+            }
         }
     }
 }
