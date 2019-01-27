@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - DropShip
   - Torpedo
+  - Menu
   layers:
   - Default
   - TransparentFX

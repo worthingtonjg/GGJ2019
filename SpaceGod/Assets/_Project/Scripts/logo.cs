@@ -15,7 +15,7 @@ public class logo : MonoBehaviour
     private IEnumerator next()
     {
         yield return new WaitForSeconds(3f);
-        SimpleSceneFader.ChangeSceneWithFade("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     // Update is called once per frame

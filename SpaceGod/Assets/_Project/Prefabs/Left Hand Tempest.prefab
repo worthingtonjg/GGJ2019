@@ -2039,7 +2039,6 @@ GameObject:
   - component: {fileID: 2650279517008264050}
   - component: {fileID: 1837720120507422485}
   - component: {fileID: 1894254656850380866}
-  - component: {fileID: 1494921585916026780}
   m_Layer: 0
   m_Name: Left Hand Tempest
   m_TagString: Untagged
@@ -2124,20 +2123,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &1494921585916026780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7041048750933339207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946ccd5c0e79d254a865800299b876cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PhotonTorpedoPrefab: {fileID: 3881141847862787086, guid: 43de183b6ea8cff499b5bf43b2601124,
-    type: 3}
 --- !u!1 &7251736820471572154
 GameObject:
   m_ObjectHideFlags: 0

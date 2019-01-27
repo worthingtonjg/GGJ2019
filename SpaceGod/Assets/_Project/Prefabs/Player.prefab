@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 773591349913697380}
   - component: {fileID: 773591349913697381}
   - component: {fileID: 773591349913697383}
+  - component: {fileID: 3753703613097735615}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -282,3 +283,16 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773591349913697405}
   m_Enabled: 1
+--- !u!114 &3753703613097735615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773591349913697405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946ccd5c0e79d254a865800299b876cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PhotonTorpedoPrefab: {fileID: 0}

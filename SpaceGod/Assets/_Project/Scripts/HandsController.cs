@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HoloToolkit.Unity.InputModule;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,25 +11,56 @@ public class HandsController : MonoBehaviour
     public GameObject PhotonTorpedoPrefab;
     private GameObject PhotonTorpedo;
     private float fireTime;
+
+    private Transform leftHandTransform;
+    private Transform rightHandTransform;
     
     // Start is called before the first frame update
     void Start()
     {
         PhotonTorpedo = null;
+        var motionControllers = GameObject.Find("MotionControllers");
+        var motionScript = motionControllers.GetComponent<MotionControllerVisualizer>();
+        motionScript.OnControllerModelLoaded += MotionScript_OnControllerModelLoaded;
+    }
+
+    private void MotionScript_OnControllerModelLoaded(MotionControllerInfo obj)
+    {
+        if(obj.Handedness == InteractionSourceHandedness.Left)
+        {
+            leftHandTransform = obj.ControllerParent.transform;
+        }
+
+        if(obj.Handedness == InteractionSourceHandedness.Right)
+        {
+            rightHandTransform = obj.ControllerParent.transform;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         var interactionSourceStates = InteractionManager.GetCurrentReading();
         foreach (var interactionSourceState in interactionSourceStates)
         {
+            //interactionSourceState.source.handedness == InteractionSourceHandedness.Left
             if (interactionSourceState.selectPressed) // Trigger pressed
             {
                 if (Time.time > fireTime + DelayTime)
                 {
+                    Transform source;
+                    if(interactionSourceState.source.handedness == InteractionSourceHandedness.Left)
+                    {
+                        source = leftHandTransform;
+                    }
+                    else
+                    {
+                        source = rightHandTransform;
+                    }
+
                     // play make fist animation
-                    var instance = Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
+                    var instance = Instantiate(PhotonTorpedoPrefab, source.position, source.rotation);
                     GameObject.Destroy(instance.gameObject, 10f);
                     fireTime = Time.time;
                 }

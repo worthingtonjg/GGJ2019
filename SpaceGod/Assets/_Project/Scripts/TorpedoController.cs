@@ -14,9 +14,10 @@ public class TorpedoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (speed == 0)
         {
-            speed = 60;
+            speed = 80;
         }
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
@@ -25,9 +26,11 @@ public class TorpedoController : MonoBehaviour
     {
         if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Torpedo")
         {
-            Debug.Log("Just hit: " + collision.gameObject.name);
-            Debug.Log("Tagged as: " + collision.gameObject.tag);
-            GameObject.Destroy(collision.gameObject);
+            if (collision.gameObject.tag != "Menu")
+            {
+                GameObject.Destroy(collision.gameObject);
+            }
+
             GameObject.Destroy(gameObject);
         }
     }
