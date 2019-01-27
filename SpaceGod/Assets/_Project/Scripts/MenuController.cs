@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public GameObject menu;
     public void StartGame()
     {
-        
+        GameObject player = GameObject.Find("Player");
+        player.transform.position = new Vector3(-41f, 52f, -176f);
     }
 
     public void LoadDropShipViewer()

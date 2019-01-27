@@ -3,7 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.WSA.Input;
+using static HoloToolkit.Unity.InputModule.MotionControllerInfo;
 
 public class HandsController : MonoBehaviour
 {
@@ -29,12 +31,16 @@ public class HandsController : MonoBehaviour
     {
         if(obj.Handedness == InteractionSourceHandedness.Left)
         {
-            leftHandTransform = obj.ControllerParent.transform;
+            Transform t;
+            obj.TryGetElement(ControllerElementEnum.PointingPose, out t);
+            leftHandTransform = t;
         }
 
         if(obj.Handedness == InteractionSourceHandedness.Right)
         {
-            rightHandTransform = obj.ControllerParent.transform;
+            Transform t;
+            obj.TryGetElement(ControllerElementEnum.PointingPose, out t);
+            rightHandTransform = t;
         }
     }
 
@@ -66,27 +72,52 @@ public class HandsController : MonoBehaviour
                     fireTime = Time.time;
                 }
             }
-            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
+
+            if (interactionSourceState.touchpadTouched) 
             {
-                // Change the position of the player to the right
-                transform.Translate(Vector3.right * speed * Time.deltaTime);
+                if (SceneManager.GetActiveScene().name == "MainScene")
+                {
+                    // Change the position of the player to the right
+                    transform.Translate(-1 * rightHandTransform.forward * speed * Time.deltaTime);
+                }
 
             }
-            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
-            {
-                // Change the position of the player to the left
-                transform.Translate(Vector3.left * speed * Time.deltaTime);
-            }
-            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y > 0.5) // Touchpad moved up
-            {
-                // Change the position of the player forward
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            }
-            else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y < -0.5) // Touchpad moved down
-            {
-                // Change the position of the player backward
-                transform.Translate(Vector3.back * speed * Time.deltaTime);
-            }
+
+            /*
+                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
+                        {
+                            if (SceneManager.GetActiveScene().name == "MainScene")
+                            {
+                                // Change the position of the player to the right
+                                transform.Translate(-1 rightHandTransform.forward * speed * Time.deltaTime);
+                            }
+
+                        }
+                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
+                        {
+                            if (SceneManager.GetActiveScene().name == "MainScene")
+                            {
+                                // Change the position of the player to the left
+                                transform.Translate(Vector3.left * speed * Time.deltaTime);
+                            }
+                        }
+                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y > 0.5) // Touchpad moved up
+                        {
+                            if (SceneManager.GetActiveScene().name == "MainScene")
+                            {
+                                // Change the position of the player forward
+                                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                            }
+                        }
+                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y < -0.5) // Touchpad moved down
+                        {
+                            if (SceneManager.GetActiveScene().name == "MainScene")
+                            {
+                                // Change the position of the player backward
+                                transform.Translate(Vector3.back * speed * Time.deltaTime);
+                            }
+                        }
+            */
         }
     }
 }

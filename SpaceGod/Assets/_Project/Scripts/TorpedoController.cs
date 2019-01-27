@@ -19,7 +19,7 @@ public class TorpedoController : MonoBehaviour
         {
             speed = 80;
         }
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(-1 * Vector3.forward * speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
