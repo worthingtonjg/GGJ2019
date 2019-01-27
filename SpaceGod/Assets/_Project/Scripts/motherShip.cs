@@ -9,6 +9,12 @@ public class motherShip : MonoBehaviour
     public float floatStrength = 0.1f;
     private float random;
     public AudioClip teleportClip;
+
+    public GameObject Explosion;
+    public AudioClip explosionClip;
+    private Vector3 target;
+
+
     // Start is called before the first frame update
     public void Init()
     {
@@ -35,5 +41,15 @@ public class motherShip : MonoBehaviour
         this.transform.position = new Vector3(this.transform.position.x,
             this.transform.position.y,
             this.transform.position.z - ((float)Mathf.Cos(Time.time) * floatStrength)); 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Torpedo")
+        {
+            Vector3 position = transform.position;
+            GameObject.Instantiate(Explosion, position, Quaternion.identity);
+            audioSource.PlayOneShot(explosionClip);
+        }
     }
 }
