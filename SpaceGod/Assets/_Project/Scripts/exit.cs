@@ -23,7 +23,10 @@ public class exit : MonoBehaviour
     {
         if(otherObject.tag == "DropShip")
         {
-            otherObject.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
+            //otherObject.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
+
+            otherObject.transform.gameObject.SetActive(false);
+            dropShipPool.pool.Add(otherObject.transform.gameObject);
 
             exitParticles.Play();
             audioSource.PlayOneShot(teleportClip);

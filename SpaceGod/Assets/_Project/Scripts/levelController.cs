@@ -41,6 +41,7 @@ public class levelController : MonoBehaviour
         audioSource.PlayOneShot(intro1Clip);
 
         StartCoroutine(Intro1Completed());
+        InvokeRepeating("RespawnDropship", 1f, 1f);
     }
 
     void Update()
@@ -89,11 +90,25 @@ public class levelController : MonoBehaviour
     IEnumerator Explode(GameObject ship, float wait)
     {
         Vector3 position = ship.transform.position;
-        ship.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
+        
+        ship.SetActive(false);
+        dropShipPool.pool.Add(ship);
+        
         GameObject.Instantiate(Explosion, position, Quaternion.identity);
         audioSource.PlayOneShot(explosionClip);
 
         yield return  new WaitForSeconds(wait);
+    }
+
+    void RespawnDropship()
+    {
+        if(dropShipPool.pool.Count > 0) 
+        {
+            GameObject ship = dropShipPool.pool[0];
+            dropShipPool.pool.RemoveAt(0);
+            ship.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
+            ship.SetActive(true);
+        }
     }
 
 }
