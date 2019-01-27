@@ -20,4 +20,9 @@ public class TorpedoController : MonoBehaviour
         }
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject.Destroy(gameObject);
+    }
 }

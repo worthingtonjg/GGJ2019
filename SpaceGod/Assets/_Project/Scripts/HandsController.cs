@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.WSA.Input;
 
 public class HandsController : MonoBehaviour
 {
+    private const float DelayTime = 5f;
     public GameObject PhotonTorpedoPrefab;
     private GameObject PhotonTorpedo;
+    private DateTime startTime;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +25,13 @@ public class HandsController : MonoBehaviour
         {
             if (interactionSourceState.selectPressed) // Trigger pressed
             {
-                // play make fist animation
-                var instance = Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
-                GameObject.Destroy(instance.gameObject, 5f);
+                if (Time.time - DelayTime > startTime.Ticks)
+                {
+                    // play make fist animation
+                    var instance = Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
+                    GameObject.Destroy(instance.gameObject, 10f);
+                    startTime = DateTime.Now;
+                }
             }
             //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
             else if (interactionSourceState.touchpadTouched) // Touchpad touched
