@@ -22,14 +22,13 @@ public class HandsController : MonoBehaviour
             if (interactionSourceState.selectPressed) // Trigger pressed
             {
                 // play make fist animation
-                Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
-
+                var instance = Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
+                GameObject.Destroy(instance.gameObject, 5f);
             }
             //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
             else if (interactionSourceState.touchpadTouched) // Touchpad touched
             {
                 // Change the position of the player to the right
-                Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
             }
             //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
             //{
