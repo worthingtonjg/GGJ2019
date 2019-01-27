@@ -9,12 +9,7 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         GameObject player = GameObject.Find("Player");
-        player.transform.position = new Vector3(-41f, 52f, -176f);
-    }
-
-    public void LoadDropShipViewer()
-    {
-        SimpleSceneFader.ChangeSceneWithFade("dropshipmodel");
+        //player.transform.position = new Vector3(-41f, 52f, -176f);
     }
 
     public void TargetHit(object name)
@@ -27,7 +22,7 @@ public class MenuController : MonoBehaviour
 
         if (name.ToString() == "ModelViewer")
         {
-            SceneManager.LoadScene("rocketmodel");
+            SceneManager.LoadScene("01rocketmodel");
         }
 
         if (name.ToString() == "Credits")
