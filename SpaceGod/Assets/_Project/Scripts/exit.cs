@@ -11,7 +11,7 @@ public class exit : MonoBehaviour
     private AudioSource audioSource;
     private GameObject player;
 
-    void Start()
+    public void Init()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         audioSource = player.GetComponent<AudioSource>();

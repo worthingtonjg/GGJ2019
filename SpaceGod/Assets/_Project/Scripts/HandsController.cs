@@ -20,7 +20,6 @@ public class HandsController : MonoBehaviour
         {
 
         }
-
         var interactionSourceStates = InteractionManager.GetCurrentReading();
         foreach (var interactionSourceState in interactionSourceStates)
         {

@@ -9,7 +9,7 @@ public class motherShip : MonoBehaviour
     public float Speed = 10.0f;
     public AudioClip teleportClip;
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         audioSource = Player.GetComponent<AudioSource>();

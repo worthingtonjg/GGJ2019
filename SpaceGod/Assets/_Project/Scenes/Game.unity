@@ -571,7 +571,6 @@ MonoBehaviour:
     type: 3}
   minSpawn: 0.1
   maxSpawn: 5
-  Speed: 1
   enemyShips:
   - {fileID: 547382978}
   - {fileID: 466835543}

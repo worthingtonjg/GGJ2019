@@ -32,7 +32,7 @@ public class levelController : MonoBehaviour
     public GameObject EnemyController;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         audioSource = player.GetComponent<AudioSource>();
