@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 139522828}
+  m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.16400933, g: 0.19318381, b: 0.254562, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -240,92 +240,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 49984922}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &139522827
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 139522829}
-  - component: {fileID: 139522828}
-  - component: {fileID: 139522830}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &139522828
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139522827}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 1
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &139522829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139522827}
-  m_LocalRotation: {x: -0.016333392, y: -0.48481116, z: 0.23759158, w: 0.841571}
-  m_LocalPosition: {x: 572, y: 158, z: -543}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1909201969}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 11.706, y: -57.274002, z: 25.123001}
---- !u!123 &139522830
-LensFlare:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139522827}
-  m_Enabled: 0
-  m_Flare: {fileID: 12100000, guid: d658006f573c00e40a9bc0095afa70fe, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_Brightness: 1
-  m_FadeSpeed: 3
-  m_IgnoreLayers:
-    serializedVersion: 2
-    m_Bits: 6
-  m_Directional: 0
 --- !u!1001 &174009274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,7 +360,7 @@ Transform:
   - {fileID: 466835544}
   - {fileID: 49984924}
   m_Father: {fileID: 1909201969}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &217268617
 PrefabInstance:
@@ -568,7 +482,7 @@ Transform:
   - {fileID: 1071891146}
   - {fileID: 41928973}
   m_Father: {fileID: 1909201969}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &360799179
 PrefabInstance:
@@ -1816,10 +1730,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1904173893}
-  - {fileID: 139522829}
+  - {fileID: 2020991260}
   - {fileID: 773591349168626610}
   - {fileID: 578152011}
-  - {fileID: 2020991260}
   - {fileID: 261136886}
   - {fileID: 181642446}
   m_Father: {fileID: 0}
@@ -1853,7 +1766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1909201969}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2120655040
 PrefabInstance:
@@ -1945,7 +1858,7 @@ PrefabInstance:
     - target: {fileID: 773591349913697405, guid: 3e596e1ee44c339489810cd3e12be145,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 773591349913697377, guid: 3e596e1ee44c339489810cd3e12be145,
         type: 3}
