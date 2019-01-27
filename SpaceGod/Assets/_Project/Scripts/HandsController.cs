@@ -5,8 +5,8 @@ using UnityEngine.XR.WSA.Input;
 
 public class HandsController : MonoBehaviour
 {
+    public GameObject PhotonTorpedoPrefab;
     private GameObject PhotonTorpedo;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,23 +16,21 @@ public class HandsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PhotonTorpedo != null)
-        {
-
-        }
         var interactionSourceStates = InteractionManager.GetCurrentReading();
         foreach (var interactionSourceState in interactionSourceStates)
         {
             if (interactionSourceState.selectPressed) // Trigger pressed
             {
                 // play make fist animation
-                PhotonTorpedo = (GameObject)Instantiate(Resources.Load("Laser"));
+                Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
 
             }
-            //if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
-            //{
-            //    // Change the position of the player to the right
-            //}
+            //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
+            else if (interactionSourceState.touchpadTouched) // Touchpad touched
+            {
+                // Change the position of the player to the right
+                Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
+            }
             //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
             //{
             //    // Change the position of the player to the left
