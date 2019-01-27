@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0223b8afb21441b023e500256ef14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 03dropship
+  sceneName: 03dropshipmodel
 --- !u!54 &1805078195
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -969,7 +969,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
+  m_Size: {x: 9.999999, y: 3, z: 10}
   m_Center: {x: -0.0000038146973, y: 0, z: -0.000015258789}
 --- !u!23 &1805078197
 MeshRenderer:
@@ -1402,7 +1402,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
+  m_Size: {x: 9.999999, y: 3, z: 10}
   m_Center: {x: -0.0000038146973, y: 0, z: -0.000015258789}
 --- !u!23 &2140873130
 MeshRenderer:

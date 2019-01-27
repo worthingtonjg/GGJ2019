@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class logo : MonoBehaviour
 {
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class logo : MonoBehaviour
 
     private IEnumerator next()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(clip.length);
         SceneManager.LoadScene("MainMenu");
     }
 
