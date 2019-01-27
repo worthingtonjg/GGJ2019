@@ -47,9 +47,9 @@ public class motherShip : MonoBehaviour
     {
         if (collision.gameObject.tag == "Torpedo")
         {
-            Vector3 position = transform.position;
-            GameObject.Instantiate(Explosion, position, Quaternion.identity);
             audioSource.PlayOneShot(explosionClip);
+            Vector3 position = transform.position;
+            Instantiate(Explosion, position, Quaternion.identity);
         }
     }
 }

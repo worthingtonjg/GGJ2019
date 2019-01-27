@@ -216,6 +216,16 @@ PrefabInstance:
       propertyPath: teleportClip
       value: 
       objectReference: {fileID: 8300000, guid: c83dcc0aee07e9342a30c73785171ac5, type: 3}
+    - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
+        type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
+    - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
+        type: 3}
+      propertyPath: explosionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa23ec0f25099b04f8a304eaa9df8a99, type: 3}
 --- !u!1 &49984923 stripped
@@ -953,6 +963,16 @@ PrefabInstance:
       propertyPath: teleportClip
       value: 
       objectReference: {fileID: 8300000, guid: c83dcc0aee07e9342a30c73785171ac5, type: 3}
+    - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
+        type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
+    - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
+        type: 3}
+      propertyPath: explosionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa23ec0f25099b04f8a304eaa9df8a99, type: 3}
 --- !u!1 &466835543 stripped
@@ -1145,6 +1165,16 @@ PrefabInstance:
       propertyPath: teleportClip
       value: 
       objectReference: {fileID: 8300000, guid: c83dcc0aee07e9342a30c73785171ac5, type: 3}
+    - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
+        type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
+    - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
+        type: 3}
+      propertyPath: explosionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa23ec0f25099b04f8a304eaa9df8a99, type: 3}
 --- !u!1 &547382978 stripped
