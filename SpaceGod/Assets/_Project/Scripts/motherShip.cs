@@ -47,6 +47,12 @@ public class motherShip : MonoBehaviour
     {
         if (collision.gameObject.tag == "Torpedo")
         {
+            if (audioSource == null)
+            {
+
+                print("Audio Source in motherShip.cs is null.");
+            }
+
             audioSource.PlayOneShot(explosionClip);
             Vector3 position = transform.position;
             Instantiate(Explosion, position, Quaternion.identity);
