@@ -23,10 +23,12 @@ public class TorpedoController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject.Destroy(gameObject);
-        //if (collision.gameObject.tag != "DropShip")
-        //{
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Torpedo")
+        {
+            Debug.Log("Just hit: " + collision.gameObject.name);
+            Debug.Log("Tagged as: " + collision.gameObject.tag);
             GameObject.Destroy(collision.gameObject);
-        //}
+            GameObject.Destroy(gameObject);
+        }
     }
 }

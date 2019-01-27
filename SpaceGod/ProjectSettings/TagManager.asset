@@ -11,6 +11,7 @@ TagManager:
   - Gate
   - Enemy
   - DropShip
+  - Torpedo
   layers:
   - Default
   - TransparentFX
