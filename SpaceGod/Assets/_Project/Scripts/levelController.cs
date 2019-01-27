@@ -26,7 +26,6 @@ public class levelController : MonoBehaviour
     public GameObject Dead5;
     
     public GameObject Explosion;
-
     public AudioClip explosionClip;
 
     public GameObject EnemyController;
