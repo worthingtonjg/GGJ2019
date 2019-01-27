@@ -8,7 +8,6 @@ public class enemyController : MonoBehaviour
     private GameObject Player;
     
     public GameObject MisslePrefab;
-
     public float minSpawn = 0.1f;
     public float maxSpawn = 5.0f;
     
@@ -17,6 +16,7 @@ public class enemyController : MonoBehaviour
     {
         enemyShips = GameObject.FindGameObjectsWithTag("Enemy");
         Player = GameObject.FindGameObjectWithTag("Player");
+        
         Invoke("Fire", 1);
     }
 
