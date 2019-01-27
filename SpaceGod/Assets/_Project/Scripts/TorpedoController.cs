@@ -16,7 +16,7 @@ public class TorpedoController : MonoBehaviour
     {
         if (speed == 0)
         {
-            speed = 1;
+            speed = 60;
         }
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
@@ -24,5 +24,9 @@ public class TorpedoController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject.Destroy(gameObject);
+        //if (collision.gameObject.tag != "DropShip")
+        //{
+            GameObject.Destroy(collision.gameObject);
+        //}
     }
 }

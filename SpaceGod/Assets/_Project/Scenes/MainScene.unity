@@ -384,20 +384,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2051360351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1482351964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482351963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946ccd5c0e79d254a865800299b876cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PhotonTorpedoPrefab: {fileID: 3881141847862787086, guid: 43de183b6ea8cff499b5bf43b2601124,
-    type: 3}
 --- !u!81 &1482351967
 AudioListener:
   m_ObjectHideFlags: 0

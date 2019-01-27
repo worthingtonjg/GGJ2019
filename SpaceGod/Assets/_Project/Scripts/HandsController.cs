@@ -6,10 +6,10 @@ using UnityEngine.XR.WSA.Input;
 
 public class HandsController : MonoBehaviour
 {
-    private const float DelayTime = 5f;
+    private const float DelayTime = 0.5f;
     public GameObject PhotonTorpedoPrefab;
     private GameObject PhotonTorpedo;
-    private DateTime startTime;
+    private float fireTime;
     
     // Start is called before the first frame update
     void Start()
@@ -25,12 +25,12 @@ public class HandsController : MonoBehaviour
         {
             if (interactionSourceState.selectPressed) // Trigger pressed
             {
-                if (Time.time - DelayTime > startTime.Ticks)
+                if (Time.time > fireTime + DelayTime)
                 {
                     // play make fist animation
                     var instance = Instantiate(PhotonTorpedoPrefab, this.transform.position, this.transform.rotation);
                     GameObject.Destroy(instance.gameObject, 10f);
-                    startTime = DateTime.Now;
+                    fireTime = Time.time;
                 }
             }
             //else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
