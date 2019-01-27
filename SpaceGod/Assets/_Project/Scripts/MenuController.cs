@@ -7,6 +7,11 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        SimpleSceneFader.ChangeSceneWithFade("Level01");
+        SimpleSceneFader.ChangeSceneWithFade("MainScene");
+    }
+
+    public void LoadDropShipViewer()
+    {
+        SimpleSceneFader.ChangeSceneWithFade("dropshipmodel");
     }
 }
