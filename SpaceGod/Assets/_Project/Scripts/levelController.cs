@@ -41,7 +41,7 @@ public class levelController : MonoBehaviour
         audioSource.PlayOneShot(intro1Clip);
 
         StartCoroutine(Intro1Completed());
-        InvokeRepeating("RespawnDropship", 5f, 5f);
+        InvokeRepeating("RespawnDropship", 10f, 10f);
     }
 
     void Update()
