@@ -6,7 +6,7 @@ public class motherShip : MonoBehaviour
     
     private AudioSource audioSource;
     private GameObject Player;
-    public float floatStrength = 1.0f;
+    public float floatStrength = 0.1f;
     private float random;
     public AudioClip teleportClip;
     // Start is called before the first frame update
