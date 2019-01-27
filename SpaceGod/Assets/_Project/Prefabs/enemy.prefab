@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4341268612692104304}
   - component: {fileID: 4341268612692104307}
   - component: {fileID: 4341268612692104306}
-  - component: {fileID: 4341268612692104317}
   - component: {fileID: 4341268612692104305}
+  - component: {fileID: 5985512176710869684}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4341268612692104317
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4341268612692104316}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4341268612692104305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +92,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2d7358265e06840a1f13116a5316ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarpAnimation: {fileID: 0}
+  floatStrength: 0.1
+  teleportClip: {fileID: 0}
+--- !u!65 &5985512176710869684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4341268612692104316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.511503, y: 3.9437037, z: 11.795025}
+  m_Center: {x: -0.064011045, y: -0.6485987, z: -3.4315631}
 --- !u!1001 &7591572067988273041
 PrefabInstance:
   m_ObjectHideFlags: 0
