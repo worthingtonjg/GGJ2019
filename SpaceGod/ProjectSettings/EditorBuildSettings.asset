@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Game.unity
     guid: 114c001760b77ef4fb4dfa4182d1d8f1
+  - enabled: 1
+    path: Assets/_Project/Scenes/dropshipmodel.unity
+    guid: 9a826be22d7cacd46b87b9b947adac2d
+  - enabled: 1
+    path: Assets/_Project/Scenes/mothershipmodel.unity
+    guid: 2a14f46cbf472aa40bc36c57c5c5ff2c
+  - enabled: 1
+    path: Assets/_Project/Scenes/rocketmodel.unity
+    guid: 59d41e5f83afade45857af4ee9254831
   m_configObjects: {}

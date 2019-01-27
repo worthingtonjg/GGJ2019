@@ -9,4 +9,9 @@ public class MenuController : MonoBehaviour
     {
         SimpleSceneFader.ChangeSceneWithFade("MainScene");
     }
+
+    public void LoadDropShipViewer()
+    {
+        SimpleSceneFader.ChangeSceneWithFade("dropshipmodel");
+    }
 }

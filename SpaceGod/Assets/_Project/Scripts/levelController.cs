@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class levelController : MonoBehaviour
 {
+    private Camera camera;
     private bool battleStarted;
     private bool intro1Complete;
     private AudioSource audioSource;
@@ -26,7 +27,6 @@ public class levelController : MonoBehaviour
     public GameObject Dead5;
     
     public GameObject Explosion;
-
     public AudioClip explosionClip;
 
     public GameObject EnemyController;
@@ -43,9 +43,14 @@ public class levelController : MonoBehaviour
 
     void Update()
     {
+        if(camera == null)
+        {
+            camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        }
+
         if(intro1Complete && !battleStarted)
         {
-            Ray ray = player.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+            Ray ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
                 if(hit.transform.name == "Exit")
