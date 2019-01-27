@@ -89,7 +89,7 @@ Material:
     m_Colors:
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 1, g: 0.6344826, b: 0, a: 0.5019608}
+    - _GlowColor: {r: 0.14901961, g: 0.41176474, b: 0.53333336, a: 1}
     - _MaskCoord: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
