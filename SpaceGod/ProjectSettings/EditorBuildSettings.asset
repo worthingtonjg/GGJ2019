@@ -18,12 +18,18 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Game.unity
     guid: 114c001760b77ef4fb4dfa4182d1d8f1
   - enabled: 1
-    path: Assets/_Project/Scenes/dropshipmodel.unity
-    guid: 9a826be22d7cacd46b87b9b947adac2d
+    path: Assets/_Project/Scenes/ModelViewers/01rocketmodel.unity
+    guid: 59d41e5f83afade45857af4ee9254831
   - enabled: 1
-    path: Assets/_Project/Scenes/mothershipmodel.unity
+    path: Assets/_Project/Scenes/ModelViewers/02mothershipmodel.unity
     guid: 2a14f46cbf472aa40bc36c57c5c5ff2c
   - enabled: 1
-    path: Assets/_Project/Scenes/rocketmodel.unity
-    guid: 59d41e5f83afade45857af4ee9254831
+    path: Assets/_Project/Scenes/ModelViewers/03dropshipmodel.unity
+    guid: 9a826be22d7cacd46b87b9b947adac2d
+  - enabled: 1
+    path: Assets/_Project/Scenes/ModelViewers/05EnemyDrone.unity
+    guid: 7c5d17b65ac2bcc4bade16a8f9c8e811
+  - enabled: 1
+    path: Assets/_Project/Scenes/ModelViewers/04PhotonTorpedo.unity
+    guid: e6ca9514fa0222149aa4bf8331617bf6
   m_configObjects: {}
