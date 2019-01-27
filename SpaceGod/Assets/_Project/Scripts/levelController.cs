@@ -29,6 +29,8 @@ public class levelController : MonoBehaviour
     public GameObject Explosion;
     public AudioClip explosionClip;
 
+    public GameObject DropShipSpawn;
+
     public GameObject EnemyController;
 
     // Start is called before the first frame update
@@ -87,7 +89,7 @@ public class levelController : MonoBehaviour
     IEnumerator Explode(GameObject ship, float wait)
     {
         Vector3 position = ship.transform.position;
-        Destroy(ship.gameObject);
+        ship.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
         GameObject.Instantiate(Explosion, position, Quaternion.identity);
         audioSource.PlayOneShot(explosionClip);
 

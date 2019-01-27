@@ -8,6 +8,8 @@ public class exit : MonoBehaviour
     public int Escaped;
     public ParticleSystem exitParticles;
     public AudioClip teleportClip;
+    public GameObject DropShipSpawn;
+
     private AudioSource audioSource;
     private GameObject player;
 
@@ -21,7 +23,8 @@ public class exit : MonoBehaviour
     {
         if(otherObject.tag == "DropShip")
         {
-            GameObject.Destroy(otherObject.transform.gameObject);
+            otherObject.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
+
             exitParticles.Play();
             audioSource.PlayOneShot(teleportClip);
 
