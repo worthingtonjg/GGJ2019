@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0223b8afb21441b023e500256ef14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 02mothership
+  sceneName: 02mothershipmodel
 --- !u!54 &1805078195
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -28,7 +28,15 @@ public class TorpedoController : MonoBehaviour
         {
             if (collision.gameObject.tag != "Menu")
             {
-                GameObject.Destroy(collision.gameObject);
+                if(collision.gameObject.tag == "DropShip")
+                {
+                    collision.gameObject.SetActive(false);
+                    dropShipPool.pool.Add(collision.gameObject);
+                }
+                else
+                {
+                    GameObject.Destroy(collision.gameObject);
+                }
             }
 
             GameObject.Destroy(gameObject);
