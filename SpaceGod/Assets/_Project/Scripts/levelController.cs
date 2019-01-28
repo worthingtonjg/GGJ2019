@@ -10,6 +10,8 @@ public class levelController : MonoBehaviour
     private AudioSource audioSource;
     private GameObject player;
 
+    public ParticleSystem WarpAnimation;
+
     public AudioClip intro1Clip;
 
     public AudioClip intro2Clip;
@@ -116,6 +118,7 @@ public class levelController : MonoBehaviour
             ship.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
             ship.SetActive(true);
             audioSource.PlayOneShot(teleportClip);
+            WarpAnimation.Play();
         }
     }
 
