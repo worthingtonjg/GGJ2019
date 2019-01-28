@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5138008262788126149}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Torpedo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

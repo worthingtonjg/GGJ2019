@@ -39,7 +39,7 @@ public class levelController : MonoBehaviour
     public GameObject DropShipSpawn;
 
     public GameObject EnemyController;
-
+    public GameObject DroneSpawners;
     public GameObject[] spawners;
 
     // Start is called before the first frame update
@@ -92,6 +92,7 @@ public class levelController : MonoBehaviour
     {
         yield return new WaitForSeconds(intro2Clip.length + 1);
         EnemyController.SetActive(true);
+        DroneSpawners.SetActive(true);
         yield return StartCoroutine(Explode(Dead1, 1f));
         yield return StartCoroutine(Explode(Dead2, 1f));
         yield return StartCoroutine(Explode(Dead3, 1f));

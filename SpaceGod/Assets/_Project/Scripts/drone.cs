@@ -17,6 +17,13 @@ public class drone : MonoBehaviour
 
     public float speed = 1;
 
+    public GameObject Explosion;
+    
+    public AudioClip explosionClip;
+
+    private AudioSource audioSource;
+    private GameObject Player;
+
     private GameObject player;
     private GameObject[] dropShips;
     private GameObject[] wayPoints;
@@ -66,6 +73,30 @@ public class drone : MonoBehaviour
             targetType = EnumTarget.WayPoint;
 
             target = wayPoints[Random.Range(0, wayPoints.Length)];
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Torpedo")
+        {
+            if (audioSource == null)
+            {
+                print("Audio Source in motherShip.cs on line 54 is null.");
+                if (Player == null)
+                {
+                    Player = GameObject.FindGameObjectWithTag("Player") as GameObject;
+                }
+                audioSource = Player.GetComponent<AudioSource>();
+                if (audioSource == null)
+                {
+                    print("Audio Source in motherShip.cs on line 62 is null.");
+                }
+            }
+
+            audioSource.PlayOneShot(explosionClip);
+            Vector3 position = transform.position;
+            Instantiate(Explosion, position, Quaternion.identity);
         }
     }
 }
