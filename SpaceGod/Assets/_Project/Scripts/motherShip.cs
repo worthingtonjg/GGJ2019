@@ -54,7 +54,15 @@ public class motherShip : MonoBehaviour
             if (audioSource == null)
             {
                 print("Audio Source in motherShip.cs on line 54 is null.");
-
+                if (Player == null)
+                {
+                    Player = GameObject.FindGameObjectWithTag("Player") as GameObject;
+                }
+                audioSource = Player.GetComponent<AudioSource>();
+                if (audioSource == null)
+                {
+                    print("Audio Source in motherShip.cs on line 62 is null.");
+                }
             }
 
             audioSource.PlayOneShot(explosionClip);
