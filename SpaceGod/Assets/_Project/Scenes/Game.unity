@@ -220,7 +220,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Explosion
       value: 
-      objectReference: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
+      objectReference: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
     - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
         type: 3}
       propertyPath: explosionClip
@@ -881,7 +881,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Explosion
       value: 
-      objectReference: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
+      objectReference: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
     - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
         type: 3}
       propertyPath: explosionClip
@@ -1083,7 +1083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Explosion
       value: 
-      objectReference: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
+      objectReference: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
     - target: {fileID: 4341268612692104305, guid: fa23ec0f25099b04f8a304eaa9df8a99,
         type: 3}
       propertyPath: explosionClip
