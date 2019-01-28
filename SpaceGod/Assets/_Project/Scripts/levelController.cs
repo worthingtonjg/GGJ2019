@@ -15,6 +15,8 @@ public class levelController : MonoBehaviour
     public AudioClip intro2Clip;
 
     public AudioClip intro3Clip;
+
+    public AudioClip battleClip;
     
     public GameObject Dead1;
 
@@ -84,6 +86,8 @@ public class levelController : MonoBehaviour
         yield return StartCoroutine(Explode(Dead5, 1f));
         audioSource.PlayOneShot(intro3Clip);
         yield return new WaitForSeconds(intro3Clip.length);
+        audioSource.clip = battleClip;
+        audioSource.loop = true;
         audioSource.Play();
     }
 

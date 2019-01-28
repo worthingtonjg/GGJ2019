@@ -11,7 +11,7 @@ public class menuButtonHit : MonoBehaviour
         if (collision.gameObject.tag == "Torpedo")
         {
             SceneManager.LoadScene(sceneName);
-            print("hit");
+            //print("hit");
         }
     }
 }

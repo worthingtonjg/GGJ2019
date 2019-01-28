@@ -9,12 +9,14 @@ using static HoloToolkit.Unity.InputModule.MotionControllerInfo;
 
 public class HandsController : MonoBehaviour
 {
-    private const float DelayTime = 0.5f;
     public GameObject PhotonTorpedoPrefab;
-    private GameObject PhotonTorpedo;
-    private float fireTime;
+    public AudioClip shootClip;
     public float speed = 1f;
 
+    private const float DelayTime = 0.5f;
+    private GameObject PhotonTorpedo;
+    private AudioSource audioSource;
+    private float fireTime;
     private Transform leftHandTransform;
     private Transform rightHandTransform;
     
@@ -25,6 +27,7 @@ public class HandsController : MonoBehaviour
         var motionControllers = GameObject.Find("MotionControllers");
         var motionScript = motionControllers.GetComponent<MotionControllerVisualizer>();
         motionScript.OnControllerModelLoaded += MotionScript_OnControllerModelLoaded;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void MotionScript_OnControllerModelLoaded(MotionControllerInfo obj)
@@ -69,6 +72,7 @@ public class HandsController : MonoBehaviour
                     // play make fist animation
                     var instance = Instantiate(PhotonTorpedoPrefab, source.position, source.rotation);
                     GameObject.Destroy(instance.gameObject, 10f);
+                    audioSource.PlayOneShot(shootClip);
                     fireTime = Time.time;
                 }
             }
@@ -82,42 +86,6 @@ public class HandsController : MonoBehaviour
                 }
 
             }
-
-            /*
-                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x > 0.5) // Touchpad moved right
-                        {
-                            if (SceneManager.GetActiveScene().name == "MainScene")
-                            {
-                                // Change the position of the player to the right
-                                transform.Translate(-1 rightHandTransform.forward * speed * Time.deltaTime);
-                            }
-
-                        }
-                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.x < -0.5) // Touchpad moved left
-                        {
-                            if (SceneManager.GetActiveScene().name == "MainScene")
-                            {
-                                // Change the position of the player to the left
-                                transform.Translate(Vector3.left * speed * Time.deltaTime);
-                            }
-                        }
-                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y > 0.5) // Touchpad moved up
-                        {
-                            if (SceneManager.GetActiveScene().name == "MainScene")
-                            {
-                                // Change the position of the player forward
-                                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                            }
-                        }
-                        else if (interactionSourceState.touchpadTouched && interactionSourceState.touchpadPosition.y < -0.5) // Touchpad moved down
-                        {
-                            if (SceneManager.GetActiveScene().name == "MainScene")
-                            {
-                                // Change the position of the player backward
-                                transform.Translate(Vector3.back * speed * Time.deltaTime);
-                            }
-                        }
-            */
         }
     }
 }
