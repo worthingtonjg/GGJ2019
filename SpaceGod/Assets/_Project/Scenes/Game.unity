@@ -1786,6 +1786,7 @@ MonoBehaviour:
   intro1Clip: {fileID: 8300000, guid: edd56e366c6e58c41a0e368993730df8, type: 3}
   intro2Clip: {fileID: 8300000, guid: e7d80f76b1da37d4991f980671adfdce, type: 3}
   intro3Clip: {fileID: 8300000, guid: 41131020659ae4b42a4f65493a1baa19, type: 3}
+  battleClip: {fileID: 8300000, guid: d1be7dbe3a810754aa4df760c0a3a9de, type: 3}
   Dead1: {fileID: 710549627}
   Dead2: {fileID: 500641159}
   Dead3: {fileID: 755927879}
@@ -1967,7 +1968,7 @@ PrefabInstance:
     - target: {fileID: 773591349913697405, guid: 3e596e1ee44c339489810cd3e12be145,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 773591349913697377, guid: 3e596e1ee44c339489810cd3e12be145,
         type: 3}
