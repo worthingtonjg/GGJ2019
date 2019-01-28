@@ -27,6 +27,9 @@ public class levelController : MonoBehaviour
     public GameObject Dead5;
     
     public GameObject Explosion;
+    
+    public AudioClip teleportClip;
+
     public AudioClip explosionClip;
 
     public GameObject DropShipSpawn;
@@ -108,6 +111,7 @@ public class levelController : MonoBehaviour
             dropShipPool.pool.RemoveAt(0);
             ship.transform.position = new Vector3(DropShipSpawn.transform.position.x, DropShipSpawn.transform.position.y, DropShipSpawn.transform.position.z);
             ship.SetActive(true);
+            audioSource.PlayOneShot(teleportClip);
         }
     }
 
