@@ -16,6 +16,7 @@ public class laserCannon : MonoBehaviour
     // Update is called once per frame
     void Shoot()
     {
-        GameObject.Instantiate(projectile, transform.position, transform.rotation);
+        var instance = GameObject.Instantiate(projectile, transform.position, transform.rotation);
+        GameObject.Destroy(instance, 6);
     }
 }

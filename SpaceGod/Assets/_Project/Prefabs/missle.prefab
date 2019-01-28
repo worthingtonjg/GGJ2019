@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fce2b7ffedd054b82d9e07d5f436c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 200
   Explosion: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
   explosionClip: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
   ExplosionPoint: {fileID: 1894865409423826147}
@@ -83,6 +83,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
+      propertyPath: m_Name
+      value: missle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ca6c68c0061afe49af5df2c655cf4f0, type: 2}
     - target: {fileID: 400000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -139,14 +147,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
-      propertyPath: m_Name
-      value: missle
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8ca6c68c0061afe49af5df2c655cf4f0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0ad6e7afe6c1640b565f6d3748aa63, type: 3}
 --- !u!1 &1651761550994135468 stripped

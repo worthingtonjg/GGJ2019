@@ -33,7 +33,7 @@ public class missle : MonoBehaviour
         //follow.y = this.transform.position.y;
         // remenber to use the new 'follow' position, not the Player.transform.position or else it'll move directly to the player
         //this.transform.position = Vector3.MoveTowards(this.transform.position, target, Speed * Time.deltaTime);
-        this.transform.Translate(Vector3.forward);
+        this.transform.Translate(transform.forward * Speed * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider otherObject)

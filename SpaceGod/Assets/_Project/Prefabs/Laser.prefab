@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fce2b7ffedd054b82d9e07d5f436c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 400
   Explosion: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
   explosionClip: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
   ExplosionPoint: {fileID: 8911572130172773835}
