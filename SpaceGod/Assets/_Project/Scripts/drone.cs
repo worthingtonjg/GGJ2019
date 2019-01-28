@@ -22,6 +22,7 @@ public class drone : MonoBehaviour
     private GameObject[] wayPoints;
 
     private GameObject target;
+    private float distanceToTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -36,13 +37,12 @@ public class drone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var distanceToTarget = Vector3.Distance(this.transform.position, target.transform.position);
-
-        if(distanceToTarget < minDistance)
+        if(target == null || distanceToTarget < minDistance)
         {
             FindTarget();
         }
 
+        distanceToTarget = Vector3.Distance(this.transform.position, target.transform.position);
         transform.LookAt(target.transform.position);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
