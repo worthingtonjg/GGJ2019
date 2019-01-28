@@ -19,6 +19,10 @@ public class motherShip : MonoBehaviour
     public void Init()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        if (Player == null)
+        {
+            print("Audio Source in motherShip.cs line 21 is null.");
+        }
         audioSource = Player.GetComponent<AudioSource>();
         WarpAnimation.Play();
         audioSource.PlayOneShot(teleportClip);
@@ -49,8 +53,8 @@ public class motherShip : MonoBehaviour
         {
             if (audioSource == null)
             {
+                print("Audio Source in motherShip.cs on line 54 is null.");
 
-                print("Audio Source in motherShip.cs is null.");
             }
 
             audioSource.PlayOneShot(explosionClip);

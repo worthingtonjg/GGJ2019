@@ -1208,88 +1208,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 497116506}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &886547114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 886547117}
-  - component: {fileID: 886547116}
-  - component: {fileID: 886547115}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &886547115
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886547114}
-  m_Enabled: 1
---- !u!20 &886547116
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886547114}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &886547117
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886547114}
-  m_LocalRotation: {x: -0.01897129, y: 0.9269625, z: 0.04731347, w: 0.37167472}
-  m_LocalPosition: {x: -355.2958, y: -164.6017, z: 658.2618}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1041244570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1865,6 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7082183908b09649a92e2b92c7f2b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarpAnimation: {fileID: 1292245302}
   intro1Clip: {fileID: 8300000, guid: edd56e366c6e58c41a0e368993730df8, type: 3}
   intro2Clip: {fileID: 8300000, guid: e7d80f76b1da37d4991f980671adfdce, type: 3}
   intro3Clip: {fileID: 8300000, guid: 41131020659ae4b42a4f65493a1baa19, type: 3}
