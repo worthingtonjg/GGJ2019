@@ -7,22 +7,27 @@ public class droneSpawner : MonoBehaviour
     public GameObject prefab;
     public int maxSpawn = 3;
 
+    public float SpawnSpeed = 10f;
+
     private int spawnCount = 0;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
-        InvokeRepeating("Spawn", 5, 5f);
+        InvokeRepeating("Spawn", 1f, SpawnSpeed);
     }
 
     // Update is called once per frame
-    void Update()
+    void Spawn()
     {
         if(spawnCount >= maxSpawn) 
         {
             CancelInvoke();
         }
-
-        Instantiate(prefab, transform.position, transform.rotation);
+        else
+        {
+            ++spawnCount;
+            Instantiate(prefab, transform.position, transform.rotation);
+        }
     }
 }

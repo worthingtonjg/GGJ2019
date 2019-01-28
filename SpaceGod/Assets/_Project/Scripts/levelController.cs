@@ -40,6 +40,8 @@ public class levelController : MonoBehaviour
 
     public GameObject EnemyController;
 
+    public GameObject[] spawners;
+
     // Start is called before the first frame update
     public void Init()
     {
@@ -49,6 +51,12 @@ public class levelController : MonoBehaviour
 
         StartCoroutine(Intro1Completed());
         InvokeRepeating("RespawnDropship", 15f, 15f);
+
+        foreach(var spawner in spawners)
+        {
+            var script = spawner.GetComponent<droneSpawner>();
+            script.Init();
+        }
     }
 
     void Update()

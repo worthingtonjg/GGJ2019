@@ -26,9 +26,8 @@ public class drone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targetType = (EnumTarget)Random.Range(0, 2);
         player = GameObject.FindGameObjectWithTag("Player");
-        dropShips = GameObject.FindGameObjectsWithTag("DropShips");
+        dropShips = GameObject.FindGameObjectsWithTag("DropShip");
         wayPoints = GameObject.FindGameObjectsWithTag("WayPoints");
 
         FindTarget();
@@ -52,6 +51,7 @@ public class drone : MonoBehaviour
     {
         if(targetType == null || targetType == EnumTarget.WayPoint)
         {
+            targetType = (EnumTarget)Random.Range(0, 2);
             if(targetType == EnumTarget.DropShip)
             {
                 target = dropShips[Random.Range(0, dropShips.Length)];

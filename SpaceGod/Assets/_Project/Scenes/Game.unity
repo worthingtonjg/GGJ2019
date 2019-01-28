@@ -1459,8 +1459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08e989fc394d9439e19a9901a99777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5776463039116364371, guid: 0f2ce6e50f30a3c4784f4a8936c48b00, type: 3}
+  prefab: {fileID: 2207812958542428733, guid: 3394f5ab85ec239408216af7a8c6c933, type: 3}
   maxSpawn: 3
+  SpawnSpeed: 10
 --- !u!65 &1312190628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1786,8 +1787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08e989fc394d9439e19a9901a99777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5776463039116364371, guid: 0f2ce6e50f30a3c4784f4a8936c48b00, type: 3}
+  prefab: {fileID: 2207812958542428733, guid: 3394f5ab85ec239408216af7a8c6c933, type: 3}
   maxSpawn: 3
+  SpawnSpeed: 10
 --- !u!65 &1680915959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2044,6 +2046,11 @@ MonoBehaviour:
   explosionClip: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
   DropShipSpawn: {fileID: 2020991259}
   EnemyController: {fileID: 181642444}
+  spawners:
+  - {fileID: 2049506562}
+  - {fileID: 1680915956}
+  - {fileID: 1312190625}
+  - {fileID: 2068909842}
 --- !u!4 &1904173893
 Transform:
   m_ObjectHideFlags: 0
@@ -2172,8 +2179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08e989fc394d9439e19a9901a99777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5776463039116364371, guid: 0f2ce6e50f30a3c4784f4a8936c48b00, type: 3}
+  prefab: {fileID: 2207812958542428733, guid: 3394f5ab85ec239408216af7a8c6c933, type: 3}
   maxSpawn: 3
+  SpawnSpeed: 10
 --- !u!65 &2049506565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2278,8 +2286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08e989fc394d9439e19a9901a99777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5776463039116364371, guid: 0f2ce6e50f30a3c4784f4a8936c48b00, type: 3}
+  prefab: {fileID: 2207812958542428733, guid: 3394f5ab85ec239408216af7a8c6c933, type: 3}
   maxSpawn: 3
+  SpawnSpeed: 10
 --- !u!65 &2068909845
 BoxCollider:
   m_ObjectHideFlags: 0
