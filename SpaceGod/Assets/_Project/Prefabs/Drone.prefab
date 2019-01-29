@@ -158,8 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistance: 50
   speed: 50
-  Explosion: {fileID: 0}
-  explosionClip: {fileID: 0}
+  Explosion: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
+  explosionClip: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
 --- !u!136 &4000978855516566460
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
   projectile: {fileID: 864802977988329117, guid: 62ad0801f4e729c49b7687f089fe3c3c,
     type: 3}
   shootRate: 1
-  projectileSpeed: 50
+  projectileSpeed: 100
   projectileLife: 3
 --- !u!1001 &5516445990745280493
 PrefabInstance:
