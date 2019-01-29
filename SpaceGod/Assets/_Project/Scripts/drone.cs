@@ -71,7 +71,6 @@ public class drone : MonoBehaviour
         else
         {
             targetType = EnumTarget.WayPoint;
-
             target = wayPoints[Random.Range(0, wayPoints.Length)];
         }
     }
@@ -82,7 +81,6 @@ public class drone : MonoBehaviour
         {
             if (audioSource == null)
             {
-                print("Audio Source in drone.cs on line 83 is null.");
                 if (Player == null)
                 {
                     Player = GameObject.FindGameObjectWithTag("Player") as GameObject;

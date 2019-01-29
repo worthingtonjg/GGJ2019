@@ -107,7 +107,7 @@ MonoBehaviour:
   projectile: {fileID: 864802977988329117, guid: 62ad0801f4e729c49b7687f089fe3c3c,
     type: 3}
   shootRate: 1
-  projectileSpeed: 50
+  projectileSpeed: 200
   projectileLife: 3
 --- !u!1 &2207812958542428733
 GameObject:
@@ -281,7 +281,7 @@ MonoBehaviour:
   projectile: {fileID: 864802977988329117, guid: 62ad0801f4e729c49b7687f089fe3c3c,
     type: 3}
   shootRate: 1
-  projectileSpeed: 100
+  projectileSpeed: 200
   projectileLife: 3
 --- !u!1001 &5516445990745280493
 PrefabInstance:
