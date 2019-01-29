@@ -28,11 +28,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332287250484603070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.96, y: 11.41, z: -2.78}
+  m_LocalPosition: {x: -11.41, y: -2.7799997, z: 25.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5516445990745675117}
-  m_RootOrder: 1
+  m_Father: {fileID: 725022076561642103}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5589604914709714522
 MeshFilter:
@@ -106,7 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 864802977988329117, guid: 62ad0801f4e729c49b7687f089fe3c3c,
     type: 3}
-  shootRate: 0.3
+  shootRate: 1
+  projectileSpeed: 50
+  projectileLife: 3
 --- !u!1 &2207812958542428733
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +139,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5516445990745675117}
+  - {fileID: 4145003185155753577}
+  - {fileID: 949645159283659709}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -154,6 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minDistance: 50
   speed: 50
+  Explosion: {fileID: 0}
+  explosionClip: {fileID: 0}
 --- !u!136 &4000978855516566460
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -196,11 +202,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4385322379578780134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.96, y: -11.33, z: -2.7799997}
+  m_LocalPosition: {x: 11.33, y: -2.7799997, z: 25.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5516445990745675117}
-  m_RootOrder: 0
+  m_Father: {fileID: 725022076561642103}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7994131885105072825
 MeshFilter:
@@ -274,7 +280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 864802977988329117, guid: 62ad0801f4e729c49b7687f089fe3c3c,
     type: 3}
-  shootRate: 0.3
+  shootRate: 1
+  projectileSpeed: 50
+  projectileLife: 3
 --- !u!1001 &5516445990745280493
 PrefabInstance:
   m_ObjectHideFlags: 0

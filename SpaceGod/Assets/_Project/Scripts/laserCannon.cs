@@ -6,6 +6,8 @@ public class laserCannon : MonoBehaviour
 {
     public GameObject projectile;
     public float shootRate;
+    public float projectileSpeed = 20f;
+    public float projectileLife = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,7 @@ public class laserCannon : MonoBehaviour
     void Shoot()
     {
         var instance = GameObject.Instantiate(projectile, transform.position, transform.rotation);
-        GameObject.Destroy(instance, 6);
+        instance.GetComponent<Rigidbody>().velocity = gameObject.transform.TransformDirection(new Vector3(0, 0, projectileSpeed));
+        GameObject.Destroy(instance, projectileLife);
     }
 }
