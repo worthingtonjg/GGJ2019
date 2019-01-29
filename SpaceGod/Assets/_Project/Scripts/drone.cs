@@ -17,6 +17,8 @@ public class drone : MonoBehaviour
 
     public float speed = 1;
 
+    public float turnSpeed = 1f;
+
     public GameObject Explosion;
     
     public AudioClip explosionClip;
@@ -50,7 +52,12 @@ public class drone : MonoBehaviour
         }
 
         distanceToTarget = Vector3.Distance(this.transform.position, target.transform.position);
-        transform.LookAt(target.transform.position);
+        //transform.LookAt(target.transform.position);
+        
+        Vector3 targetDir = target.transform.position - transform.position;
+        var newDir = Vector3.RotateTowards(transform.forward, targetDir, turnSpeed * Time.deltaTime, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newDir);
+        
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
