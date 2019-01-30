@@ -21,7 +21,7 @@ public class portal : MonoBehaviour
     IEnumerator NextLevel()
     {
         yield return new WaitForSeconds(3);
-        //SceneManager.LoadScene("Home");
+        SceneManager.LoadScene("Home");
     }
 
 }
