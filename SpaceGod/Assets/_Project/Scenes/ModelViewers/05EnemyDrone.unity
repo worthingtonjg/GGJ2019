@@ -1209,6 +1209,7 @@ GameObject:
   - component: {fileID: 2051518016}
   - component: {fileID: 2051518015}
   - component: {fileID: 2051518014}
+  - component: {fileID: 2051518018}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Menu
@@ -1292,6 +1293,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -89.048004, y: 4.8960004, z: 0}
+--- !u!114 &2051518018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051518013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2f54421425c1a43b345390dba5de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prevScene: 04PhotonTorpedo
+  nextScene: MainMenu
 --- !u!1 &2140873125
 GameObject:
   m_ObjectHideFlags: 0
