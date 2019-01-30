@@ -19,6 +19,9 @@ public class creditsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = new Vector3(-69, 33, -105);
+
         StartCoroutine(RollCredits());
     }
 
