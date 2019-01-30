@@ -11,6 +11,7 @@ public class portal : MonoBehaviour
     void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<AudioSource>().Stop();
         
         Vector3 position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z + 10);
         
@@ -20,7 +21,7 @@ public class portal : MonoBehaviour
 
     IEnumerator NextLevel()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("Home");
     }
 

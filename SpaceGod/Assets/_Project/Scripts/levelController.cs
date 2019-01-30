@@ -106,6 +106,7 @@ public class levelController : MonoBehaviour
         if(EnemyCount == 0 && !levelComplete)
         {
             levelComplete = true;
+            audioSource.Stop();
             audioSource.PlayOneShot(levelCompleteClip);
         }
 
