@@ -32,7 +32,12 @@ public class creditsController : MonoBehaviour
     {
         if(current > 0)
         {
-            sections[current-1].transform.DOMove(Out.transform.position, 3, false).OnComplete(CompleteAction);
+            sections[current-1].transform.DOMove(Out.transform.position, 3, false);
+
+            if(current >= sections.Length)
+            {
+                StartCoroutine(NextScene());
+            }
         }
 
         if(current < sections.Length)        
@@ -49,11 +54,9 @@ public class creditsController : MonoBehaviour
         }
     }
 
-    private void CompleteAction()
+    IEnumerator NextScene()
     {
-        if(current == sections.Length)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("MainMenu");
     }
 }
