@@ -98,7 +98,7 @@ public class drone : MonoBehaviour
                     print("Audio Source in drone.cs on line 90 is null.");
                 }
             }
-
+            --levelController.EnemyCount;
             audioSource.PlayOneShot(explosionClip);
             Vector3 position = transform.position;
             Instantiate(Explosion, position, Quaternion.identity);
