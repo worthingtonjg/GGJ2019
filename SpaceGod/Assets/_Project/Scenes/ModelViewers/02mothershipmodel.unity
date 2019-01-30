@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prevScene: 01rocketmodel
-  nextScene: 02mothershipmodel
+  nextScene: 03dropshipmodel
 --- !u!1 &1959364734
 GameObject:
   m_ObjectHideFlags: 0

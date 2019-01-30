@@ -22,8 +22,8 @@ public class debugCamera : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.Z))
         {
-            this.gameObject.SetActive(true);
             player.SetActive(false);
+            this.gameObject.SetActive(true);
         }
     }
 }

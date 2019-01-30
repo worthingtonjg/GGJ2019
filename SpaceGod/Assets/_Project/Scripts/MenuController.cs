@@ -11,10 +11,13 @@ public class MenuController : MonoBehaviour
     {
         GameObject player = GameObject.Find("Player");
 
-        var audioSource = player.GetComponent<AudioSource>();
-        audioSource.clip = music;
-        audioSource.loop = true;
-        audioSource.Play();
+        if(player != null)
+        {
+            var audioSource = player.GetComponent<AudioSource>();
+            audioSource.clip = music;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
 
     void Update()
