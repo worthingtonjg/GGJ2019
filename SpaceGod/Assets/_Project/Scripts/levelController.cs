@@ -52,7 +52,7 @@ public class levelController : MonoBehaviour
 
     public static int dropShipSpawned = 10;
 
-    public static int dropShipTotal = 25;
+    public static int dropShipTotal = 15;
 
     public static int dropShipThroughPortal = 0;
 
@@ -76,6 +76,8 @@ public class levelController : MonoBehaviour
             var script = spawner.GetComponent<droneSpawner>();
             script.Init();
         }
+
+        textMesh.SetText("Escaped: " + dropShipThroughPortal + " of " + dropShipTotal);
     }
 
     void Update()
@@ -166,7 +168,7 @@ public class levelController : MonoBehaviour
     public static void IncrementEscaped()
     {
         ++dropShipThroughPortal;
-        textMesh.SetText("Escaped: " + dropShipThroughPortal + " of 25");
+        textMesh.SetText("Escaped: " + dropShipThroughPortal + " of " + dropShipTotal);
         print("Escaped " + dropShipThroughPortal);
     }
 
