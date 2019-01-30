@@ -57,11 +57,18 @@ public class levelController : MonoBehaviour
     public static int dropShipThroughPortal = 0;
 
     public static int EnemyCount = 15;
-    private bool levelComplete;
+    public static bool levelComplete;
 
     // Start is called before the first frame update
     public void Init()
     {
+        // Reset values for play again
+        dropShipThroughPortal = 0;
+        battleStarted = false;
+        intro1Complete = false;
+        levelComplete = false;
+        EnemyCount = 15;
+
         player = GameObject.FindGameObjectWithTag("Player");
         audioSource = player.GetComponent<AudioSource>();
         audioSource.Stop();
@@ -170,7 +177,7 @@ public class levelController : MonoBehaviour
     {
         ++dropShipThroughPortal;
         textMesh.SetText("Escaped: " + dropShipThroughPortal + " of " + dropShipTotal);
-        print("Escaped " + dropShipThroughPortal);
+        //print("Escaped " + dropShipThroughPortal);
     }
 
 }

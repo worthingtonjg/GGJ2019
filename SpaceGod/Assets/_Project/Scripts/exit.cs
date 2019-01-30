@@ -36,7 +36,7 @@ public class exit : MonoBehaviour
             }
         }
 
-        if(levelController.EnemyCount == 0)
+        if(levelController.EnemyCount == 0 && levelController.levelComplete)
         {
             if(otherObject.tag == "Player")
             {
