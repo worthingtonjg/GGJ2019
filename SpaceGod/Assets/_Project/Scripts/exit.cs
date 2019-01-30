@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class exit : MonoBehaviour
 {
-    public bool battleStarted;
-    public int Escaped;
     public ParticleSystem exitParticles;
     public AudioClip teleportClip;
     public GameObject DropShipSpawn;
@@ -31,9 +30,17 @@ public class exit : MonoBehaviour
             exitParticles.Play();
             audioSource.PlayOneShot(teleportClip);
 
-            if(battleStarted)
+            if(levelController.battleStarted)
             {
-                ++Escaped;
+                levelController.IncrementEscaped();
+            }
+        }
+
+        if(levelController.EnemyCount == 0)
+        {
+            if(otherObject.tag == "Player")
+            {
+                SceneManager.LoadScene("Portal");
             }
         }
     }

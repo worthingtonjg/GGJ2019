@@ -14,8 +14,14 @@ public class droneSpawner : MonoBehaviour
     // Start is called before the first frame update
     public void Init()
     {
+
+    }
+
+    public void Start()
+    {
         InvokeRepeating("Spawn", 1f, SpawnSpeed);
     }
+
 
     // Update is called once per frame
     void Spawn()

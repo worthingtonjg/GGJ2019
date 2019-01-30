@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class levelController : MonoBehaviour
 {
+    private static TextMeshPro textMesh;
     private Camera camera;
-    private bool battleStarted;
+    public static bool battleStarted;
+    public static bool battleOver;
     private bool intro1Complete;
     private AudioSource audioSource;
     private GameObject player;
@@ -19,6 +23,8 @@ public class levelController : MonoBehaviour
     public AudioClip intro3Clip;
 
     public AudioClip battleClip;
+
+    public AudioClip levelCompleteClip;
     
     public GameObject Dead1;
 
@@ -42,12 +48,25 @@ public class levelController : MonoBehaviour
     public GameObject DroneSpawners;
     public GameObject[] spawners;
 
+    public GameObject EscapedProgress;
+
+    public static int dropShipSpawned = 10;
+
+    public static int dropShipTotal = 15;
+
+    public static int dropShipThroughPortal = 0;
+
+    public static int EnemyCount = 15;
+    private bool levelComplete;
+
     // Start is called before the first frame update
     public void Init()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         audioSource = player.GetComponent<AudioSource>();
+        audioSource.Stop();
         audioSource.PlayOneShot(intro1Clip);
+        textMesh = EscapedProgress.GetComponent<TextMeshPro>();
 
         StartCoroutine(Intro1Completed());
         InvokeRepeating("RespawnDropship", 15f, 15f);
@@ -57,6 +76,8 @@ public class levelController : MonoBehaviour
             var script = spawner.GetComponent<droneSpawner>();
             script.Init();
         }
+
+        textMesh.SetText("Escaped: " + dropShipThroughPortal + " of " + dropShipTotal);
     }
 
     void Update()
@@ -71,6 +92,7 @@ public class levelController : MonoBehaviour
             Ray ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
+            {
                 if(hit.transform.name == "Exit")
                 {
                     battleStarted = true;
@@ -79,7 +101,18 @@ public class levelController : MonoBehaviour
                     
                 }
             }
+        }
 
+        if(EnemyCount == 0 && !levelComplete)
+        {
+            levelComplete = true;
+            audioSource.PlayOneShot(levelCompleteClip);
+        }
+
+        if(Input.GetKeyUp(KeyCode.X) && EnemyCount > 0)
+        {
+            EnemyCount = 0;
+        }
     }
 
     IEnumerator Intro1Completed()
@@ -96,8 +129,8 @@ public class levelController : MonoBehaviour
         yield return StartCoroutine(Explode(Dead1, 1f));
         yield return StartCoroutine(Explode(Dead2, 1f));
         yield return StartCoroutine(Explode(Dead3, 1f));
-        yield return StartCoroutine(Explode(Dead4, 1f));
-        yield return StartCoroutine(Explode(Dead5, 1f));
+//        yield return StartCoroutine(Explode(Dead4, 1f));
+//        yield return StartCoroutine(Explode(Dead5, 1f));
         audioSource.PlayOneShot(intro3Clip);
         yield return new WaitForSeconds(intro3Clip.length);
         audioSource.clip = battleClip;
@@ -120,7 +153,7 @@ public class levelController : MonoBehaviour
 
     void RespawnDropship()
     {
-        if(dropShipPool.pool.Count > 0) 
+        if(dropShipPool.pool.Count > 0 && dropShipSpawned <= dropShipTotal) 
         {
             GameObject ship = dropShipPool.pool[0];
             dropShipPool.pool.RemoveAt(0);
@@ -128,7 +161,15 @@ public class levelController : MonoBehaviour
             ship.SetActive(true);
             audioSource.PlayOneShot(teleportClip);
             WarpAnimation.Play();
+            ++dropShipSpawned;
         }
+    }
+
+    public static void IncrementEscaped()
+    {
+        ++dropShipThroughPortal;
+        textMesh.SetText("Escaped: " + dropShipThroughPortal + " of " + dropShipTotal);
+        print("Escaped " + dropShipThroughPortal);
     }
 
 }

@@ -7,21 +7,21 @@ using UnityEngine.SceneManagement;
 public class logo : MonoBehaviour
 {
     public AudioClip clip;
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         StartCoroutine(next());
     }
 
     private IEnumerator next()
     {
-        yield return new WaitForSeconds(clip.length);
+        yield return new WaitForSeconds(clip.length + 1);
         SceneManager.LoadScene("MainMenu");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

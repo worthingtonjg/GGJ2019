@@ -6,9 +6,36 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public GameObject menu;
-    public void StartGame()
+    public AudioClip music;
+    public void Start()
     {
         GameObject player = GameObject.Find("Player");
-        //player.transform.position = new Vector3(-41f, 52f, -176f);
+
+        if(player != null)
+        {
+            var audioSource = player.GetComponent<AudioSource>();
+            audioSource.clip = music;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
     }
+
+    void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.S))
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+
+        if(Input.GetKeyUp(KeyCode.C))
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
+        if(Input.GetKeyUp(KeyCode.M))
+        {
+            SceneManager.LoadScene("01rocketmodel");
+        }
+    }
+
 }
