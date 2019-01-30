@@ -63,7 +63,9 @@ public class motherShip : MonoBehaviour
                     print("Audio Source in motherShip.cs on line 62 is null.");
                 }
             }
-
+            
+            --levelController.EnemyCount;
+            
             audioSource.PlayOneShot(explosionClip);
             Vector3 position = transform.position;
             Instantiate(Explosion, position, Quaternion.identity);
