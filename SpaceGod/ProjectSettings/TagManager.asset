@@ -14,6 +14,7 @@ TagManager:
   - Torpedo
   - Menu
   - WayPoints
+  - Credits
   layers:
   - Default
   - TransparentFX
