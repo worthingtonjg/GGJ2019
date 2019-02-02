@@ -232,6 +232,8 @@ MonoBehaviour:
   Debris: {fileID: 7453279599470642173, guid: 4613d02636613d64fad728cdd5a6c5b6, type: 3}
   finalClip: {fileID: 8300000, guid: 64d6e489e9c2bef4a8c301007f801255, type: 3}
   music: {fileID: 8300000, guid: 9cccf7d478904d7498d06d92febc9bbe, type: 3}
+  Explosion: {fileID: 100002, guid: 4bf22a1d8d9e7724b9af67921436851d, type: 3}
+  explosionClip: {fileID: 8300000, guid: a3b1018caf7f44145a2f2ff17e88873d, type: 3}
 --- !u!1 &1924563208
 GameObject:
   m_ObjectHideFlags: 0

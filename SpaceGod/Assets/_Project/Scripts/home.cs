@@ -9,16 +9,16 @@ public class home : MonoBehaviour
     public AudioClip finalClip;
     public AudioClip music;
 
-    private AudioSource source;
-    
+    private GameObject Player;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        var player = GameObject.FindGameObjectWithTag("Player");
-        source = player.GetComponent<AudioSource>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = Player.GetComponent<AudioSource>();
 
-        GameObject.Instantiate(Debris, player.transform.position, Quaternion.identity);
+        GameObject.Instantiate(Debris, Player.transform.position, Quaternion.identity);
         var debris = GameObject.FindGameObjectsWithTag("Debris");
         foreach (var chunk in debris)
         {
@@ -32,11 +32,11 @@ public class home : MonoBehaviour
     // Update is called once per frame
     IEnumerator CutScene()
     {
-        source.PlayOneShot(finalClip);
+        audioSource.PlayOneShot(finalClip);
         yield return new WaitForSeconds(finalClip.length + 1);
-        source.clip = music;
-        source.loop = true;
-        source.Play();
+        audioSource.clip = music;
+        audioSource.loop = true;
+        audioSource.Play();
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Credits");
     }
