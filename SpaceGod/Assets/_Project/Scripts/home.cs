@@ -29,7 +29,6 @@ public class home : MonoBehaviour
         StartCoroutine(CutScene());
     }
 
-    // Update is called once per frame
     IEnumerator CutScene()
     {
         audioSource.PlayOneShot(finalClip);
@@ -37,7 +36,7 @@ public class home : MonoBehaviour
         audioSource.clip = music;
         audioSource.loop = true;
         audioSource.Play();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(30f);
         SceneManager.LoadScene("Credits");
     }
 }
